@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youth Empowerment Hub</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background:linear-gradient(#80FFDB,#5390D9);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #00bcd4;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 2rem;
+            letter-spacing: 2px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 2s ease-in-out;
+        }
+        .content{
+            position:relative;
+        }
+
+        nav {
+            text-align: center;
+            background-color: #008c9e;
+            padding: 10px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: slideIn 1s ease-in-out;
+            position:sticky;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+            transition: color 0.3s;
+        }
+
+        .container {
+            padding: 30px;
+            text-align: center;
+        }
+
+        section {
+            margin: 30px 0;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: white;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            width: 250px;
+            margin: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.05);
+        }
+
+        .card h3 {
+            color: #00bcd4;
+            font-size: 1.5rem;
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        footer {
+            background-color: #008c9e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(0); }
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 70%;
+            max-width: 600px;
+            text-align: left;
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        #feedback #feedbackForm textarea{
+            height: 100px;
+            width:500px
+
+        }
+        #empowerment-gallery{
+            display: flex;
+            justify-content: space-between;
+            margin-left:45px;
+            margin-right:45px;
+            
+        }
+        img{
+            height: 32px;
+            width: 32px;
+        }
+
+        .hello{
+            position: relative;
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <header class="hello">
+        Youth Empowerment Hub
+    </header>
+    <section id="empowerment-gallery">
+        <div class="empowerment-item">
+            <img src="https://www.cse.iitb.ac.in/~vkaushal/post/yes/featured.jpg" alt="Youth Empowerment Image 1">
+            <p>Empowerment through Education</p>
+        </div>
+        <div class="empowerment-item">
+            <img src="https://i.ytimg.com/vi/YUX1fqSlv4o/sddefault.jpg?v=5eb88771.jpg" alt="Youth Empowerment Image 2">
+            <p>Skill Development Workshops</p>
+        </div>
+        <div class="empowerment-item">
+            <img src="https://ngofeed.com/blog/wp-content/uploads/2024/09/NGOs-in-Youth-Empowerment.jpg" alt="Youth Empowerment Image 3">
+            <p>Leadership Programs</p>
+        </div>
+    </section>
+   <div class="content"> <nav>
+        <a href="#skill">Skill Development</a>
+        <a href="#mental-health">Mental Health</a>
+        <a href="#career">Career Guidance</a>
+        <a href="#creativity">Creative Expression</a>
+        <a href="#community">Community</a>
+    </nav>
+</div>
+
+    <div class="container">
+        <!-- Skill Development Section -->
+        <section id="skill">
+            <h2>Skill Development</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Online Courses</h3>
+                    <p>Access top-rated courses and workshops to develop new skills.</p>
+                </div>
+                <div class="card">
+                    <h3>Certifications</h3>
+                    <p>Earn certifications in various domains to boost your profile.</p>
+                </div>
+                <div class="card">
+                    <h3>Webinars</h3>
+                    <p>Join live webinars to learn from industry experts and thought leaders.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mental Health Support Section -->
+        <section id="mental-health">
+            <h2>Mental Health Support</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Therapy Resources</h3>
+                    <p>Find a therapist or counselor that suits your needs.</p>
+                </div>
+                <div class="card">
+                    <h3>Mindfulness</h3>
+                    <p>Practice mindfulness techniques to reduce stress and anxiety.</p>
+                </div>
+                <div class="card">
+                    <h3>Self-Help</h3>
+                    <p>Explore self-help resources for mental well-being.</p>
+                </div>
+                <button class="showModalBtn" onclick="openModal()">More Mental Health Resources</button>
+            </div>
+        </section>
+
+        <!-- Career Guidance Section -->
+        <section id="career">
+            <h2>Career Guidance</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Internships</h3>
+                    <p>Find internships to kickstart your career journey.</p>
+                </div>
+                <div class="card">
+                    <h3>Job Opportunities</h3>
+                    <p>Get access to the latest job listings and apply with ease.</p>
+                </div>
+                <div class="card">
+                    <h3>Mentorship</h3>
+                    <p>Connect with mentors for personalized career advice and guidance.</p>
+                </div>
+            </div>
+            <button onclick="showCareerForm()">Apply for Jobs</button>
+            <div id="careerForm" style="display: none; margin-top: 20px;">
+                <h3>Job Application Form</h3>
+                <form id="jobForm">
+                    <input type="text" placeholder="Name" required><br><br>
+                    <input type="email" placeholder="Email" required><br><br>
+                    <textarea placeholder="Your Message" required></textarea><br><br>
+                    <button type="submit">Submit Application</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Creative Expression Section -->
+        <section id="creativity">
+            <h2>Creative Expression</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Art Gallery</h3>
+                    <p>Showcase your art and explore works from others.</p>
+                </div>
+                <div class="card">
+                    <h3>Writing Platform</h3>
+                    <p>Share your stories, poetry, and creative writing.</p>
+                </div>
+                <div class="card">
+                    <h3>Music Sharing</h3>
+                    <p>Upload and share your music with a supportive community.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Section -->
+        <section id="community">
+            <h2>Social Connections</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Networking Events</h3>
+                    <p>Join virtual meetups to connect with like-minded individuals.</p>
+                </div>
+                <div class="card">
+                    <h3>Discussion Forums</h3>
+                    <p>Participate in discussions to exchange ideas and knowledge.</p>
+                </div>
+                <div class="card">
+                    <h3>Online Groups</h3>
+                    <p>Join or create groups to chat and collaborate with others.</p>
+                </div>
+            </div>
+        </section>
+        <section id="feedback">
+            <h2>Share Your Ideas</h2>
+            <form id="feedbackForm">
+                <textarea id="userFeedback" placeholder="Share your thoughts..." required "></textarea>
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Youth Empowerment Hub. All rights reserved.</p>
+    </footer>
+
+    <!-- Modal for Mental Health Resources -->
+    <div id="mentalHealthModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Mental Health Resources</h2>
+            <p>Here are some valuable resources for mental health support...</p>
+            <ul>
+                <li>Online therapy services</li>
+                <li>Mindfulness apps</li>
+                <li>Support groups</li>
+                <li>Hotlines</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Smooth Scroll Navigation
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Modal Functionality
+        function openModal() {
+            document.getElementById("mentalHealthModal").style.display = "flex";
+        }
+
+        function closeModal() {
+            document.getElementById("mentalHealthModal").style.display = "none";
+        }
+
+        // Career Form
+        function showCareerForm() {
+            document.getElementById("careerForm").style.display = "block";
+        }
+    </script>
+</body>
+</html>
